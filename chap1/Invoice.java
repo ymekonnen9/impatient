@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Invoice {
-
+  //static inner class
   ArrayList<Item> items = new ArrayList<>();
 
   public static class Item{

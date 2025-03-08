@@ -12,7 +12,7 @@ public class FilterFiles{
 
       if (!directory.isDirectory()) {
         System.out.println("Invalid directory: " + dirName);
-        return new File[0]; // Return empty array if not a directory
+        return new File[0]; 
     }
 
       String[] myDirectories = directory.list(new FilenameFilter() {
@@ -21,7 +21,7 @@ public class FilterFiles{
         };
       });
 
-      if (myDirectories == null) return new File[0]; // Handle null case
+      if (myDirectories == null) return new File[0]; 
 
   
       ArrayList<File> returnSubDirs = new ArrayList<>();
@@ -35,7 +35,7 @@ public class FilterFiles{
 
     };
 
-    File[] directories = filli.filter("C:/backend/backend/src/main/java/com/remoteAccess/backend/AwsConfig");
+    File[] directories = filli.filter("/home/yared9/impatient/lambdaexpressions");
         
     for (File dir : directories) {
         System.out.println(dir.getAbsolutePath());

@@ -71,6 +71,12 @@ public class Pair<E extends Comparable<E>>{
    
       return max;
 }
+
+  public <E extends Comparable<E>> Pair<E> minMax(Pair<E>[] pairs){
+      E min = min(pairs);
+      E max = max(pairs);
+      return new Pair<E>(min, max);
+  }
   }
 
 

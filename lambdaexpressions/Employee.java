@@ -1,6 +1,6 @@
 package lambdaexpressions;
 
-public class Employee implements Measurable {
+public class Employee implements Measurable, Comparable<Employee> {
   private String firstName;
   private String lastName;
   private double salary;
@@ -61,5 +61,11 @@ public class Employee implements Measurable {
 
 
       }
+
+
+    @Override
+    public int compareTo(Employee o) {
+        return (int) (this.salary - o.salary);
+    }
 
 }
